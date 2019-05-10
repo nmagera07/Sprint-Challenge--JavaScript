@@ -7,14 +7,14 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return cb(x + y)
-}
+// function sumNums(x, y, cb) {
+//   // sumNums adds two numbers (x, y) and passes the result to the callback.
+//   return cb(x + y)
+// }
 
-sumNums(2, 4, function (sum) {
-  console.log(sum)
-})
+// sumNums(2, 4, function (sum) {
+//   console.log(sum)
+// })
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -23,38 +23,38 @@ sumNums(2, 4, function (sum) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function consume(x, y, cb) {
+function add(x, y, cb) {
   
   return cb(x + y)
 }
 
-consume(2, 4, function (add) {
-  console.log(add)
+add(2, 2, function (consume) {
+  console.log(consume)
 })
 
 // Multiply callback function
-function consume(x, y, cb) {
+function multiply(x, y, cb) {
   
   return cb(x * y)
 }
 
-consume(2, 4, function (multiply) {
-  console.log(multiply)
+multiply(10, 16, function (consume) {
+  console.log(consume)
 })
 
 //Greeting function
-function consume(firstName, lastName, cb) {
-  return `Hello ${firstName} ${lastName}, nice to meet you!`
+function greeting(firstName, lastName, cb) {
+  return cb(`Hello ${firstName} ${lastName}, nice to meet you!`)
 }
 
-consume('Mary', 'Poppins', function(greeting) {
-  console.log(greeting)
+greeting('Mary', 'Poppins', function(consume) {
+  console.log(consume)
 })
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+//consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -62,7 +62,7 @@ consume('Mary', 'Poppins', function(greeting) {
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-// nestedFunction() can access the variable 'internal' because it can access parent variables. It's a child element, therefore can access the parent's attributes. 
+// nestedFunction() can access the variable 'internal' because it can access parent variables. It's a child element, therefore can access the parent's attributes, within that scope. 
 
 const external = "I'm outside the function";
 
