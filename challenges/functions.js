@@ -24,38 +24,39 @@ sumNums(2, 4, function (sum) {
 */
 
 function consume(x, y, callback) {
-  const sum = x + y;
-  callback (sum)
+  // const sum = x + y;
+  callback (x,y)
 }
 
-function add(sum) {
-  console.log(sum)
+function add(x,y) {
+  
+  console.log(x + y)
 }
 
 // Multiply callback function
-function consume(x, y, callback) {
-  const product = x * y;
-  callback (product)
-}
+// function consume(x, y, callback) {
+//   const product = x * y;
+//   callback (product)
+// }
 
-function multiply(product) {
-  console.log(product)
+function multiply(x,y) {
+  console.log(x * y)
 }
 
 //Greeting function
-function consume(firstName, lastName, callback) {
-  const greet = `Hello ${firstName} ${lastName}, nice to meet you!`
-  callback(greet) 
-}
+// function consume(firstName, lastName, callback) {
+//   const greet = `Hello ${firstName} ${lastName}, nice to meet you!`
+//   callback(greet) 
+// }
 
-function greeting(greet) {
-  console.log(greet)
+function greeting(firstName, lastName) {
+  console.log(`Hello ${firstName} ${lastName}, nice to meet you!`)
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
 consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
