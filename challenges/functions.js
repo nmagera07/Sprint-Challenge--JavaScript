@@ -23,36 +23,37 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function add(x, y, cb) {
-  
-  return cb(x + y)
+function consume(x, y, callback) {
+  const sum = x + y;
+  callback (sum)
 }
 
-add(2, 2, function (consume) {
-  console.log(consume)
-})
+function add(sum) {
+  console.log(sum)
+}
 
 // Multiply callback function
-function multiply(x, y, cb) {
-  
-  return cb(x * y)
+function consume(x, y, callback) {
+  const product = x * y;
+  callback (product)
 }
 
-multiply(10, 16, function (consume) {
-  console.log(consume)
-})
+function multiply(product) {
+  console.log(product)
+}
 
 //Greeting function
-function greeting(firstName, lastName, cb) {
-  return cb(`Hello ${firstName} ${lastName}, nice to meet you!`)
+function consume(firstName, lastName, callback) {
+  const greet = `Hello ${firstName} ${lastName}, nice to meet you!`
+  callback(greet) 
 }
 
-greeting('Mary', 'Poppins', function(consume) {
-  console.log(consume)
-})
+function greeting(greet) {
+  console.log(greet)
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-//consume(2,2,add); // 4
+consume(2,2,add); // 4
 consume(10,16,multiply); // 160
 consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
