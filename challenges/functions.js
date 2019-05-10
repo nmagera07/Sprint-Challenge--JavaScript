@@ -7,14 +7,14 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-// function sumNums(x, y, cb) {
-//   // sumNums adds two numbers (x, y) and passes the result to the callback.
-//   return cb(x + y)
-// }
+function sumNums(x, y, cb) {
+  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y)
+}
 
-// sumNums(2, 4, function (sum) {
-//   console.log(sum)
-// })
+sumNums(2, 4, function (sum) {
+  console.log(sum)
+})
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -55,7 +55,7 @@ function greeting(greet) {
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
 consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
